@@ -1,0 +1,3 @@
+name renhongl
+ age 18
+male true
