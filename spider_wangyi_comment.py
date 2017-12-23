@@ -7,13 +7,20 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver import ActionChains
 import time
+import pymongo
 
-songs = ['爱久见人心']
+songs = ['情歌']
 current = 0
-total_page = 3
+total_page = 1
 current_page = 1
 show_browser = True
+save_to_db = True
 
+def save_to_db(comment):
+    client = pymongo.MongoClient(host='localhost', port=27017)
+    db = client.wangyi
+    collection = db.comments
+    collection.insert_one(comment)
 
 def search_by_page(browser, song):
     global total_page
@@ -23,8 +30,16 @@ def search_by_page(browser, song):
     with open('./output/wangyi/' + song + '.txt', 'a', encoding='utf-8') as comment_file:
         lines = ''
         for item in items:
+            arr = str.split(item.text, '：')
+            comment = {
+                'song': song,
+                'name': arr[0],
+                'comment': arr[1]
+            }
+            save_to_db(comment)
             lines = lines + item.text + '\n\n'
         comment_file.write(lines)
+        
     print('搜索结束')
     if(current_page < total_page):
         current_page = current_page + 1
