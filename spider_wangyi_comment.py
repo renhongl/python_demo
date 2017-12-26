@@ -13,8 +13,8 @@ songs = ['情歌']
 current = 0
 total_page = 1
 current_page = 1
-show_browser = True
-save_to_db = True
+show_browser = False
+save_to_db = False
 
 def save_to_db(comment):
     client = pymongo.MongoClient(host='localhost', port=27017)
@@ -58,7 +58,10 @@ def search_by_song(song):
     if show_browser:
         browser = webdriver.Chrome()
     else:
-        browser = webdriver.PhantomJS()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--headless')
+        browser = webdriver.Chrome(chrome_options=chrome_options)
+        # browser = webdriver.PhantomJS()
         
     try:
         browser.maximize_window()
@@ -69,7 +72,7 @@ def search_by_song(song):
         input.send_keys(song)
         input.send_keys(Keys.ENTER)
 
-        items = browser.find_elements_by_css_selector('.text')
+        items = browser.find_elements_by_css_selector('.text a')
         for item in items:
             if(item.text == songs[current]):
                 item.click()
