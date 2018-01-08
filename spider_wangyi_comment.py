@@ -9,9 +9,9 @@ from selenium.webdriver import ActionChains
 import time
 import pymongo
 
-songs = ['情歌']
+songs = ['追光者']
 current = 0
-total_page = 1
+total_page = 100
 current_page = 1
 show_browser = False
 save_to_db = False
