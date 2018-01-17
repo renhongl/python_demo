@@ -11,7 +11,7 @@ import pymongo
 song_hash_queue = queue.Queue()
 ROOT_URL = 'http://www.kugou.com/yy/special/index/1-3-0.html'
 PLAY_URL = 'http://www.kugou.com/yy/index.php?r=play/getdata&hash=' #1FF3CB3D374E44AAC3AC98BE047748E3
-SHOW_BROWSER = False
+SHOW_BROWSER = True
 SAVE_TO_DB = False
 
 class Fetch_Song_Hash_From_Rank(threading.Thread):
