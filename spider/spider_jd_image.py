@@ -31,7 +31,7 @@ def save_img(url, i):
     global current_page
     print('save: ' + url)
     img_data = requests.get(url).content
-    with open('./output/jd/page'+ str(current_page)+'-'+ str(i) + '.jpg', 'wb') as img:
+    with open('../output/jd/page'+ str(current_page)+'-'+ str(i) + '.jpg', 'wb') as img:
         img.write(img_data)
 
 

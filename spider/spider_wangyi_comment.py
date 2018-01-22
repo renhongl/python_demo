@@ -27,7 +27,7 @@ def search_by_page(browser, song):
     global current_page
     print('搜索歌曲: <' + song + '>第' + str(current_page) + '页')
     items = browser.find_elements_by_css_selector('.cnt.f-brk')
-    with open('./output/wangyi/' + song + '.txt', 'a', encoding='utf-8') as comment_file:
+    with open('../output/wangyi/' + song + '.txt', 'a', encoding='utf-8') as comment_file:
         lines = ''
         for item in items:
             arr = str.split(item.text, '：')

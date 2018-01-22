@@ -40,10 +40,10 @@ def run(i):
             css_code = '.mr-' + title + '::before{content:"' + code + '";}\n'
             html_codes = html_codes + html_code
             css_codes = css_codes + css_code
-        with open('./output/newIcon/icon_html.txt', 'a', encoding='utf-8') as icon_html:
+        with open('../output/newIcon/icon_html.txt', 'a', encoding='utf-8') as icon_html:
             icon_html.write(html_codes)
 
-        with open('./output/newIcon/icon_css.txt', 'a', encoding='utf-8') as icon_css:
+        with open('../output/newIcon/icon_css.txt', 'a', encoding='utf-8') as icon_css:
             icon_css.write(css_codes)
 
         print('Save finish')

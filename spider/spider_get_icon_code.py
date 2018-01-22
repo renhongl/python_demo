@@ -39,15 +39,15 @@ def run():
                 html_line = '<i class="mr-icon mr-'+ '-'.join(strArr).lower() +'"></i>\n'
                 codeHtml = codeHtml + html_line
                 codeObjArr.append(temp)
-        with open('./output/icon/icon.json','w', encoding='utf-8') as icon_json:
+        with open('../output/icon/icon.json','w', encoding='utf-8') as icon_json:
             json.dump(codeObjArr, icon_json, ensure_ascii=False)
             print('save json finish')
 
-        with open('./output/icon/icon.txt', 'w', encoding='utf-8') as icon_txt:
+        with open('../output/icon/icon.txt', 'w', encoding='utf-8') as icon_txt:
             icon_txt.write(codeLine);
             print('save txt finish')
 
-        with open('./output/icon/icon.html', 'w', encoding='utf-8') as icon_html:
+        with open('../output/icon/icon.html', 'w', encoding='utf-8') as icon_html:
             icon_html.write(codeHtml)
             print('save html finish')
 

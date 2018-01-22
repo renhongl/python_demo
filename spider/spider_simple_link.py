@@ -10,7 +10,7 @@ def get_link(url, file_name):
     response = requests.get(url, headers=headers)
     soup = BeautifulSoup(response.content, 'html.parser')
 
-    with open('./output/'+file_name+'.txt', 'a', encoding='utf-8') as simple_spider_data:
+    with open('../output/'+file_name+'.txt', 'a', encoding='utf-8') as simple_spider_data:
         for link in soup.find_all('a'):
             if link.find('h4'):
                 name = link.find('h4').string

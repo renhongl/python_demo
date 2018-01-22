@@ -86,7 +86,7 @@ class Fetch_Song_Data_From_Hash(threading.Thread):
             print('正在搜索: <' + song['name'] + '>的信息')
             response = requests.get(PLAY_URL + song['hash'], headers=headers)
             song_obj = response.json()['data']
-            with open('./output/kugou/songs.txt', 'a', encoding='utf-8') as song_file:
+            with open('../output/kugou/songs.txt', 'a', encoding='utf-8') as song_file:
                 json.dump(song_obj, song_file, ensure_ascii=False)
                 song_file.write('\n')
             if SAVE_TO_DB:
