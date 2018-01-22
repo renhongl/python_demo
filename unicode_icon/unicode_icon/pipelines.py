@@ -21,7 +21,7 @@ class UnicodeIconPipeline(object):
         self.css.write(css)
         return item
 
-    def close_spider(self):
+    def close_spider(self, spider):
         self.file.close()
         self.html.close()
         self.css.close()

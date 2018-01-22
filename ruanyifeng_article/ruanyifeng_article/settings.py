@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for unicode_icon project
+# Scrapy settings for ruanyifeng_article project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,17 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'unicode_icon'
+BOT_NAME = 'ruanyifeng_article'
 
-SPIDER_MODULES = ['unicode_icon.spiders']
-NEWSPIDER_MODULE = 'unicode_icon.spiders'
+SPIDER_MODULES = ['ruanyifeng_article.spiders']
+NEWSPIDER_MODULE = 'ruanyifeng_article.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'unicode_icon (+http://www.yourdomain.com)'
+#USER_AGENT = 'ruanyifeng_article (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -33,7 +33,7 @@ ROBOTSTXT_OBEY = False
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = False
+#COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -47,13 +47,13 @@ COOKIES_ENABLED = False
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'unicode_icon.middlewares.UnicodeIconSpiderMiddleware': 543,
+#    'ruanyifeng_article.middlewares.RuanyifengArticleSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'unicode_icon.middlewares.UnicodeIconDownloaderMiddleware': 543,
+#    'ruanyifeng_article.middlewares.RuanyifengArticleDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ COOKIES_ENABLED = False
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'unicode_icon.pipelines.UnicodeIconPipeline': 300,
+   'ruanyifeng_article.pipelines.RuanyifengArticlePipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

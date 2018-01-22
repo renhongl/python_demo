@@ -23,10 +23,10 @@ def get_mark():
         html_codes = html_codes + '<i class="mr-icon mr-'+title+'"></i>\n'
         css_codes = css_codes + '.mr-' + title + '::before{content:"' + code + '";}\n'
 
-    with open('./output/newIcon2/icon_html.txt', 'a', encoding='utf-8') as icon_html:
+    with open('../output/newIcon2/icon_html.txt', 'a', encoding='utf-8') as icon_html:
         icon_html.write(html_codes)
 
-    with open('./output/newIcon2/icon_css.txt', 'a', encoding='utf-8') as icon_css:
+    with open('../output/newIcon2/icon_css.txt', 'a', encoding='utf-8') as icon_css:
         icon_css.write(css_codes)
 
     print(links[index].get_attribute('href') + '获取成功')
