@@ -19,6 +19,7 @@ class UnicodeTwoSpider(CrawlSpider):
         items = []
         url_title = response.xpath('/html/head/title/text()').extract()[0]
         titles = response.xpath('//mark[@class="unicode"]/@title').extract()
+        # titles = response.css('mark[class=unicode]::attr(title)').extract()
         for title in titles:
             item = UnicodeIconItem()
             item['code_title'] = title.split(': ')[1].replace(' ', '-').lower()
