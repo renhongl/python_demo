@@ -5,22 +5,23 @@ import smtplib
 
 msg = MIMEText('hello, send by python...', 'plain', 'utf-8')
 
-from_addr = 'liang_renhong@163.com'
+from_addr = 'liangrenhong2017@gmail.com'
 
-password = '111621116'
+password = '_lrh0000'
 
-to_addr = 'liangrenhong2017@gmail.com'
+to_addr = '1075220132@qq.com'
 
-smtp_server = 'smtp.163.com'
+smtp_server = 'smtp.gmail.com'
 
-server = smtplib.SMTP(smtp_server, 25)
-
-server.set_debuglevel(1)
+server = smtplib.SMTP_SSL(smtp_server, 465)
+# server.connect(smtp_server, 465)
+# server.set_debuglevel(1)
 
 server.login(from_addr, password)
 
 server.sendmail(from_addr, [to_addr], msg.as_string())
 
-server.close()
+server.quit()
 
+print('sended')
 
