@@ -7,7 +7,7 @@ msg = MIMEText('hello, send by python...', 'plain', 'utf-8')
 
 from_addr = 'liangrenhong2017@gmail.com'
 
-password = '_lrh0000'
+password = '**'
 
 to_addr = '1075220132@qq.com'
 
