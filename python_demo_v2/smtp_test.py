@@ -1,27 +1,23 @@
-
-
-from email.mime.text import MIMEText
 import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
 
-msg = MIMEText('hello, send by python...', 'plain', 'utf-8')
+sender = 'liang_renhong@163.com'
+password = '******'
+receivers = ['1075220132@qq.com']
+mail_server = 'smtp.163.com'
 
-from_addr = 'liangrenhong2017@gmail.com'
+message = MIMEText('Test smtp prog', 'plain', 'utf-8')
+message['Subject'] = 'Test'
+message['From'] = sender
+message['To'] =  ';'.join(receivers)
 
-password = '**'
-
-to_addr = '1075220132@qq.com'
-
-smtp_server = 'smtp.gmail.com'
-
-server = smtplib.SMTP_SSL(smtp_server, 465)
-# server.connect(smtp_server, 465)
-# server.set_debuglevel(1)
-
-server.login(from_addr, password)
-
-server.sendmail(from_addr, [to_addr], msg.as_string())
-
-server.quit()
-
-print('sended')
-
+try:
+    smtp = smtplib.SMTP(mail_server, 25)
+    smtp.login(sender, password)
+    smtp.sendmail(sender, receivers, message.as_string())
+    smtp.quit()
+    print('发送成功。')
+except smtplib.SMTPException as e:
+    print('发送失败。')
+    print(e)
