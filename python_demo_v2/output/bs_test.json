@@ -1,0 +1,62 @@
+[
+    {
+        "question": "\r\nQ: react-leaflet with original leaflet plugins    ",
+        "vote": "1"
+    },
+    {
+        "question": "\r\nQ: Not installed react-leaflet library    ",
+        "vote": "-2"
+    },
+    {
+        "question": "\r\nQ: React Leaflet Collision    ",
+        "vote": "0"
+    },
+    {
+        "question": "\r\nQ: Using Leaflet plugins on react-leaflet    ",
+        "vote": "0"
+    },
+    {
+        "question": "\r\nQ: Add leaflet plugins to React-Leaflet    ",
+        "vote": "3"
+    },
+    {
+        "question": "\r\nQ: react-leaflet add layers dynamically    ",
+        "vote": "8"
+    },
+    {
+        "question": "\r\nQ: React-Leaflet Search Box Implementation    ",
+        "vote": "2"
+    },
+    {
+        "question": "\r\nQ: React Leaflet - Draw Bezier curve    ",
+        "vote": "0"
+    },
+    {
+        "question": "\r\nQ: Search box in react-leaflet looks wrong    ",
+        "vote": "0"
+    },
+    {
+        "question": "\r\nQ: Integrate Leaflet.Polyline.SnakeAnim with react-leaflet    ",
+        "vote": "0"
+    },
+    {
+        "question": "\r\nQ: React-leaflet how to resetStyle    ",
+        "vote": "3"
+    },
+    {
+        "question": "\r\nQ: Render mapbox vector tiles inside react-leaflet?    ",
+        "vote": "1"
+    },
+    {
+        "question": "\r\nQ: Error while loading a basic react-leaflet map    ",
+        "vote": "0"
+    },
+    {
+        "question": "\r\nQ: react-leaflet: adding a TopoJSON layer    ",
+        "vote": "1"
+    },
+    {
+        "question": "\r\nQ: React-leaflet custom components, how to extend Polyline from Leaflet?    ",
+        "vote": "2"
+    }
+]
